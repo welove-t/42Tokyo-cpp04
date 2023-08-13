@@ -5,10 +5,15 @@ int main( void )
 {
 	// Animal animal;
 	const Animal* meta = new Animal();
-	Dog	dog;
+	const Dog* i = new Dog();
+	std::cout << i->getType() << " " << std::endl;
 	meta->makeSound();
-	dog.makeSound();
+	i->makeSound();
+	// dog.makeSound();
 
+	delete meta;
+	std::cout << "meta delete done" << std::endl;
+	delete i;
 	return 0;
 }
 
