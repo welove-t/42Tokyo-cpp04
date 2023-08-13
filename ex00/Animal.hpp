@@ -22,6 +22,7 @@ class Animal
 		Animal(const Animal& rhs);
 		Animal& operator=(const Animal& rhs);
 		void	makeSound(void) const;
+		const std::string& getType(void) const;
 
 };
 

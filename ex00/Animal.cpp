@@ -35,3 +35,8 @@ void	Animal::makeSound(void) const
 {
 	std::cout << "(Animal) ...hoge " << std::endl;
 }
+
+const std::string& Animal::getType(void) const
+{
+	return type;
+}
