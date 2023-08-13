@@ -16,10 +16,13 @@ class Animal
 		std::string type;
 	public:
 		Animal();
+		Animal(std::string type);
 		~Animal();
 
 		Animal(const Animal& rhs);
 		Animal& operator=(const Animal& rhs);
+		void	makeSound(void) const;
+
 };
 
 #endif

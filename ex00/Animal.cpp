@@ -3,7 +3,12 @@
 /* Orthodox Canonical Form */
 Animal::Animal()
 {
-	std::cout << "(Animal) Default constructor called" << std::endl;
+	std::cout << "(Animal) Default Constructor called" << std::endl;
+}
+
+Animal::Animal(std::string type):type(type)
+{
+	std::cout << "(Animal) Constructor called" << std::endl;
 }
 
 Animal::Animal(const Animal& rhs) : type(rhs.type)
@@ -23,4 +28,10 @@ Animal& Animal::operator=(const Animal& rhs)
 	type = rhs.type;
 	std::cout << "(Animal) Copy assignment operator called" << std::endl;
 	return *this;
+}
+
+/* Function */
+void	Animal::makeSound(void) const
+{
+	std::cout << "(Animal) ...hoge " << std::endl;
 }

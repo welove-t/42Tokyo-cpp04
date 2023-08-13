@@ -13,6 +13,8 @@ class Dog :public Animal
 
 		Dog(const Dog& rhs);
 		Dog& operator=(const Dog& rhs);
+
+		void	makeSound(void) const;
 };
 
 #endif

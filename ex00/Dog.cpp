@@ -1,9 +1,8 @@
 #include "Dog.hpp"
 
 /* Orthodox Canonical Form */
-Dog::Dog()
+Dog::Dog():Animal("Dog")
 {
-	type = "Dog";
 	std::cout << "(Dog) Default constructor called" << std::endl;
 }
 
@@ -25,4 +24,9 @@ Dog& Dog::operator=(const Dog& rhs)
 	type = rhs.type;
 	std::cout << "(Dog) Copy assignment operator called" << std::endl;
 	return *this;
+}
+
+void	Dog::makeSound(void) const
+{
+	std::cout << "(Dog) BowWow!!" << std::endl;
 }
