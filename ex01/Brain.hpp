@@ -13,10 +13,6 @@ class Brain
 
 		Brain(const Brain& rhs);
 		Brain& operator=(const Brain& rhs);
-
-		void				setBrain(std::string b);
-		const std::string&	getBrain(void) const;
-
 };
 
 #endif
