@@ -1,5 +1,5 @@
-#ifndef ANIMAL_HPP
-#define ANIMAL_HPP
+#ifndef WRONGANIMAL_HPP
+#define WRONGANIMAL_HPP
 
 #include <iostream>
 
@@ -9,19 +9,19 @@
 #define BLUE	"\e[0;34m" // Blue
 #define RESET 	"\e[0m"    // Reset
 
-class Animal
+class WrongAnimal
 {
 	private:
 	protected:
 		std::string type;
 	public:
-		Animal();
-		Animal(std::string type);
-		virtual ~Animal();
+		WrongAnimal();
+		WrongAnimal(std::string type);
+		~WrongAnimal();
 
-		Animal(const Animal& rhs);
-		Animal& operator=(const Animal& rhs);
-		virtual void	makeSound(void) const;
+		WrongAnimal(const WrongAnimal& rhs);
+		WrongAnimal& operator=(const WrongAnimal& rhs);
+		void	makeSound(void) const;
 		const std::string& getType(void) const;
 
 };
