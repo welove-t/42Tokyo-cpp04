@@ -3,17 +3,19 @@
 /* Orthodox Canonical Form */
 Dog::Dog():Animal("Dog")
 {
+	this->brain = new Brain();
 	std::cout << "(Dog) Default constructor called" << std::endl;
 }
 
 Dog::Dog(const Dog& rhs) : Animal(rhs)
 {
-	type = "Dog";
+	type = rhs.type;
 	std::cout << "(Dog) Copy Constructor called" << std::endl;
 }
 
 Dog::~Dog()
 {
+	delete this->brain;
 	std::cout << "(Dog) Destructor called" << std::endl;
 }
 

@@ -3,17 +3,19 @@
 /* Orthodox Canonical Form */
 Cat::Cat():Animal("Cat")
 {
+	this->brain = new Brain();
 	std::cout << "(Cat) Default constructor called" << std::endl;
 }
 
 Cat::Cat(const Cat& rhs) : Animal(rhs)
 {
-	type = "Cat";
+	type = rhs.type;
 	std::cout << "(Cat) Copy Constructor called" << std::endl;
 }
 
 Cat::~Cat()
 {
+	delete this->brain;
 	std::cout << "(Cat) Destructor called" << std::endl;
 }
 
