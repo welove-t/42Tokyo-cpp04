@@ -8,7 +8,7 @@ Dog::Dog():Animal("Dog")
 
 Dog::Dog(const Dog& rhs) : Animal(rhs)
 {
-	type = "Dog";
+	type = rhs.type;
 	std::cout << "(Dog) Copy Constructor called" << std::endl;
 }
 
