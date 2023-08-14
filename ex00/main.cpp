@@ -11,6 +11,8 @@ int main( void )
 		"               Normal Animal " 			<< std::endl <<
 		"------------------------------------------" << std::endl <<
 	RESET << std::endl;
+
+	std::cout << GREEN << "----- Constract----- " << RESET << std::endl;
 	const Animal* meta = new Animal();
 	const Animal* j = new Dog();
 	const Animal* i = new Cat();
@@ -21,6 +23,7 @@ int main( void )
 	j->makeSound();
 	i->makeSound();
 
+	std::cout << YELLOW << "----- destruct----- " << RESET << std::endl;
 	delete	meta;
 	delete	j;
 	delete	i;
@@ -31,6 +34,7 @@ int main( void )
 	"------------------------------------------" << std::endl <<
 	RESET << std::endl;
 
+	std::cout << GREEN << "----- Constract----- " << RESET << std::endl;
 	const WrongAnimal* wrongAnimal = new WrongAnimal();
 	const WrongAnimal* wrongCat = new WrongCat();
 	std::cout << wrongAnimal->getType() << " " << std::endl;
@@ -38,6 +42,7 @@ int main( void )
     wrongAnimal->makeSound();
 	wrongCat->makeSound();
 
+	std::cout << YELLOW << "----- destruct----- " << RESET << std::endl;
 	delete	wrongAnimal;
 	delete	wrongCat;
 	return	0;
