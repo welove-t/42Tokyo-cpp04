@@ -1,7 +1,7 @@
 #include "Ice.hpp"
 
 /* Orthodox Canonical Form */
-Ice::Ice() : AMateria("Ice")
+Ice::Ice() : AMateria("ice")
 {
 	std::cout << "(Ice) Default constructor called" << std::endl;
 }
