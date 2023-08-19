@@ -24,3 +24,9 @@ Ice& Ice::operator=(const Ice& rhs)
 	std::cout << "(Ice) Copy assignment operator called" << std::endl;
 	return *this;
 }
+
+/* Function */
+AMateria*	Ice::clone() const
+{
+	return new Ice(*this);
+}
