@@ -29,3 +29,9 @@ AMateria& AMateria::operator=(const AMateria& rhs)
 	std::cout << "(AMateria) Copy assignment operator called" << std::endl;
 	return *this;
 }
+
+/* Getter */
+std::string const & AMateria::getType() const
+{
+	return _type;
+}
