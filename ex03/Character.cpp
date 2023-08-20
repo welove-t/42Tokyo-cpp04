@@ -67,15 +67,22 @@ void 	Character::equip(AMateria* m)
 		if (_inventory[i] == nullptr)
 		{
 			_inventory[i] = m;
+			std::cout << GREEN << _name <<  " equipped " << _inventory[i]->getType() << RESET << std::endl;
 			return ;
 		}
 	}
+	std::cout << RED << "A lot of belongings !" << RESET << std::endl;
+	delete m;
 }
 
 void 	Character::unequip(int idx)
 {
-	if (0 <= idx && idx < 4)
+	if ((0 <= idx && idx < 4) && _inventory[idx])
+	{
+		std::cout << GREEN << _name <<  " unequipped " << _inventory[idx]->getType() << RESET << std::endl;
+		delete _inventory[idx];
 		_inventory[idx] = nullptr;
+	}
 }
 
 void	Character::use(int idx, ICharacter& target)
