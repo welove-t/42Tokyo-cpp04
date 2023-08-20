@@ -58,3 +58,23 @@ void	Character::clearInventory(void)
 		}
 	}
 }
+
+void 	Character::equip(AMateria* m)
+{
+	for (int i = 0; i < 4; i++)
+	{
+		if (_inventory[i] == nullptr)
+		{
+			_inventory[i] = m;
+			return ;
+		}
+	}
+}
+
+void 	Character::unequip(int idx)
+{
+	if (0 <= idx && idx < 4)
+	{
+		_inventory[idx] = nullptr;
+	}
+}
