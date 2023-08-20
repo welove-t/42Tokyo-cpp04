@@ -25,6 +25,7 @@ Character::Character(const Character& rhs) : _name(rhs._name)
 Character::~Character()
 {
 	std::cout << "(Character) Destructor called" << std::endl;
+	clearInventory();
 }
 
 Character& Character::operator=(const Character& rhs)
@@ -32,6 +33,7 @@ Character& Character::operator=(const Character& rhs)
 	std::cout << "(Character) Copy assignment operator called" << std::endl;
 	if (this == &rhs)
 		return *this;
+	clearInventory();
 	_name = rhs._name;
 	for (int i = 0; i < 4; i++)
 		_inventory[i] = rhs._inventory[i] ? rhs._inventory[i]->clone() : nullptr;
@@ -39,3 +41,14 @@ Character& Character::operator=(const Character& rhs)
 }
 
 /* Function */
+void	Character::clearInventory(void)
+{
+	for (int i = 0; i < 4; i++)
+	{
+		if (_inventory[i])
+		{
+			delete _inventory[i];
+			_inventory[i] = nullptr;
+		}
+	}
+}
