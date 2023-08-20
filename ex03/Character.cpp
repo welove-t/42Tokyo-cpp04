@@ -40,6 +40,12 @@ Character& Character::operator=(const Character& rhs)
 	return *this;
 }
 
+/* Getter */
+std::string const &	Character::getName() const
+{
+	return _name;
+}
+
 /* Function */
 void	Character::clearInventory(void)
 {
