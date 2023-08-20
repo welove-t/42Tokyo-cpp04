@@ -15,7 +15,7 @@ int main( void )
 	const Animal* j = new Dog();
 	const Animal* i = new Cat();
 
-	std::cout << YELLOW << "----- destruct----- " << RESET << std::endl;
+	std::cout << YELLOW << "----- Destruct----- " << RESET << std::endl;
 	delete j;
 	delete i;
 
@@ -32,7 +32,11 @@ int main( void )
 		new Cat(), new Cat(), new Cat(),
 	};
 
-	std::cout << YELLOW << "----- destruct----- " << RESET << std::endl;
+	std::cout << GREEN << "----- MakeSound----- " << RESET << std::endl;
+	for (int i =0; i < 6; i++)
+		animals[i]->makeSound();
+
+	std::cout << YELLOW << "----- Destruct----- " << RESET << std::endl;
 	for (int i = 0; i < 6; i++)
 	{
 		std::cout << i + 1 << std::endl;
@@ -51,7 +55,7 @@ int main( void )
 	Cat cat;
 	Cat copyCat = cat;
 
-	std::cout << YELLOW << "----- destruct----- " << RESET << std::endl;
+	std::cout << YELLOW << "----- Destruct----- " << RESET << std::endl;
 	return	0;
 }
 
