@@ -18,6 +18,7 @@ Character::Character(const std::string& name): _name(name)
 Character::Character(const Character& rhs) : _name(rhs._name)
 {
 	std::cout << "(Character) Copy Constructor called" << std::endl;
+	clearInventory();
 	for (int i = 0; i < 4; i++)
 		_inventory[i] = rhs._inventory[i] ? rhs._inventory[i]->clone() : nullptr;
 }
